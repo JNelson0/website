@@ -1,12 +1,7 @@
 import "./topbar.scss";
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-    Whatshot,
-    MailOutline,
-    PhoneOutlined,
-    ContentCopy,
-} from "@mui/icons-material/";
+import { MailOutline, PhoneOutlined, ContentCopy } from "@mui/icons-material/";
 import DownloadIcon from "@mui/icons-material/Download";
 
 export default function Topbar({ menuOpen, setMenuOpen }) {

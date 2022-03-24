@@ -1,6 +1,6 @@
 import "./portfolio.scss";
 import PortfolioList from "../portfolioList/PortfolioList";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Portfolio() {
@@ -17,7 +17,7 @@ export default function Portfolio() {
         },
         {
             id: "school",
-            title: "School Projects",
+            title: "School/Internship",
         },
         {
             id: "hackathon",
@@ -46,7 +46,7 @@ export default function Portfolio() {
                             : "itemNotSelected"
                     }
                 >
-                    <img src="assets/WebScraperPic.png" alt="" />
+                    <img src="assets/WebScraperPic.PNG" alt="" />
                     <h3>Movie Finder</h3>
                 </Link>
                 <Link
@@ -57,7 +57,7 @@ export default function Portfolio() {
                             : "itemNotSelected"
                     }
                 >
-                    <img src="assets/HackathonPic.png" alt="" />
+                    <img src="assets/HackathonPic.PNG" alt="" />
                     <h3>Hackathon</h3>
                 </Link>
                 <Link
@@ -68,20 +68,9 @@ export default function Portfolio() {
                             : "itemNotSelected"
                     }
                 >
-                    <img src="assets/globe.png" alt="" />
+                    <img src="/website/assets/globe.png" alt="" />
                     <h3>Network Monitoring</h3>
                 </Link>
-
-                <div
-                    className={
-                        selected === "featured" || selected === "hackathon"
-                            ? "itemSelected"
-                            : "itemNotSelected"
-                    }
-                >
-                    <img src="assets/globe.png" alt="" />
-                    <h3>Application</h3>
-                </div>
             </div>
         </div>
     );

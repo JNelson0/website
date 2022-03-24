@@ -7,7 +7,6 @@ import Hackathon from "./components/hackathon/Hackathon";
 import NetworkMonitor from "./components/networkMonitor/NetworkMonitor";
 
 import "./app.scss";
-import { useState } from "react";
 
 function App() {
     return (

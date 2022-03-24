@@ -238,7 +238,7 @@ export default function Terminal({ setTerminalActive }) {
             <span>
                 <Link
                     className="itemContainer"
-                    to="files/JaredNelsonResume.pdf"
+                    to="/files/JaredNelsonResume.pdf"
                     target="_blank"
                     download
                 >
@@ -267,6 +267,7 @@ export default function Terminal({ setTerminalActive }) {
                 <a
                     href="https://www.linkedin.com/in/jared-nelson-31231419a/"
                     target="_blank"
+                    rel="noreferrer"
                 >
                     Connect with me!
                 </a>

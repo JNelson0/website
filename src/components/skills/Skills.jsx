@@ -50,10 +50,10 @@ export default function Skills() {
                             <img src="assets/javascript.png" alt="" />
                             <h3 className="js">JavaScript</h3>
                         </div>
-                        <div className="item">
+                        {/* <div className="item">
                             <img src="assets/c++.png" alt="" />
                             <h3>C++</h3>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className="right section">
