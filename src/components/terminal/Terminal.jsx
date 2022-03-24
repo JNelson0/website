@@ -238,7 +238,7 @@ export default function Terminal({ setTerminalActive }) {
             <span>
                 <Link
                     className="itemContainer"
-                    to="/public/files/JaredNelsonResume.pdf"
+                    to="files/JaredNelsonResume.pdf"
                     target="_blank"
                     download
                 >

@@ -11,7 +11,7 @@ export default function NetworkMonitor() {
             <h1>Network Monitoring</h1>
             <Link
                 className="download"
-                to="/public/files/researchpaper_Nelson_Jared.pdf"
+                to="files/researchpaper_Nelson_Jared.pdf"
                 target="_blank"
                 download
             >
@@ -20,7 +20,7 @@ export default function NetworkMonitor() {
             <div className="pdf">
                 <iframe
                     className="pdfFile"
-                    src="/public/files/researchpaper_Nelson_Jared.pdf#toolbar=0"
+                    src="files/researchpaper_Nelson_Jared.pdf#toolbar=0"
                     frameborder="0"
                 ></iframe>
             </div>
