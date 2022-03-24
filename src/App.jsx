@@ -15,9 +15,12 @@ function App() {
             <BrowserRouter basename="/website/">
                 <Routes>
                     <Route index path="/" element={<MainPage />} />
-                    <Route path="MovieScraper" element={<MovieScraper />} />
-                    <Route path="Hackathon" element={<Hackathon />} />
-                    <Route path="NetworkMonitor" element={<NetworkMonitor />} />
+                    <Route path="/MovieScraper" element={<MovieScraper />} />
+                    <Route path="/Hackathon" element={<Hackathon />} />
+                    <Route
+                        path="/NetworkMonitor"
+                        element={<NetworkMonitor />}
+                    />
                 </Routes>
             </BrowserRouter>
         </div>

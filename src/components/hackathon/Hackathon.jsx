@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Hackathon() {
     return (
         <div className="hackathon">
-            <Link to="/website/" className="homeButton">
+            <Link to="/" className="homeButton">
                 Home
             </Link>
 

@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 export default function NetworkMonitor() {
     return (
         <div className="networkMonitor">
-            <Link to="/website/" className="homeButton">
+            <Link to="/" className="homeButton">
                 Home
             </Link>
             <h1>Network Monitoring</h1>
             <Link
                 className="download"
-                to="/website/public/files/researchpaper_Nelson_Jared.pdf"
+                to="/public/files/researchpaper_Nelson_Jared.pdf"
                 target="_blank"
                 download
             >
@@ -20,7 +20,7 @@ export default function NetworkMonitor() {
             <div className="pdf">
                 <iframe
                     className="pdfFile"
-                    src="/website/public/files/researchpaper_Nelson_Jared.pdf#toolbar=0"
+                    src="/public/files/researchpaper_Nelson_Jared.pdf#toolbar=0"
                     frameborder="0"
                 ></iframe>
             </div>

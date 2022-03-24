@@ -19,7 +19,7 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
                     </a>
                     <Link
                         className="itemContainer"
-                        to="website/public/files/JaredNelsonResume.pdf"
+                        to="files/JaredNelsonResume.pdf"
                         target="_blank"
                         download
                     >

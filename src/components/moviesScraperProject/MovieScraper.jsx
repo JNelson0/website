@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function MovieScraper() {
     return (
         <div className="movieScraper">
-            <Link to="/website/" className="homeButton">
+            <Link to="/" className="homeButton">
                 Home
             </Link>
             <div className="center">

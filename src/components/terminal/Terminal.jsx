@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import { ReactTerminal } from "react-terminal";
 import "./terminal.scss";
+import { Link } from "react-router-dom";
 
 export default function Terminal({ setTerminalActive }) {
     function isColor(strColor) {
@@ -235,14 +236,14 @@ export default function Terminal({ setTerminalActive }) {
         ),
         resume: (
             <span>
-                <a
+                <Link
+                    className="itemContainer"
+                    to="/public/files/JaredNelsonResume.pdf"
                     target="_blank"
-                    aria-label="Resume"
-                    rel="noreferrer"
-                    href="website/public/files/JaredNelsonResume.pdf"
+                    download
                 >
                     resume.pdf
-                </a>
+                </Link>
             </span>
         ),
         about: () => setTerminalActive(false),
