@@ -1,0 +1,12 @@
+$mainColor: rgb(0, 0, 252);
+$lightMainColor: rgb(56, 56, 255);
+
+$offWhite: rgb(240, 240, 240);
+
+$width: 768px;
+
+@mixin mobile {
+    @media (max-width: #{$width}) {
+        @content;
+    }
+}

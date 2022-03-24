@@ -1,0 +1,10 @@
+@import "../../global.scss";
+.terminal {
+    position: relative;
+    height: 500px;
+    width: 800px;
+
+    @include mobile {
+        width: 100%;
+    }
+}
