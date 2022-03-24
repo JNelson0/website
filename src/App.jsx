@@ -12,7 +12,7 @@ import { useState } from "react";
 function App() {
     return (
         <div className="app">
-            <BrowserRouter>
+            <BrowserRouter basename="/website/">
                 <Routes>
                     <Route index path="/" element={<MainPage />} />
                     <Route path="MovieScraper" element={<MovieScraper />} />

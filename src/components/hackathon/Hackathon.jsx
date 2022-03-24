@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Hackathon() {
     return (
         <div className="hackathon">
-            <Link to="/" className="homeButton">
+            <Link to="/website/" className="homeButton">
                 Home
             </Link>
 
@@ -61,14 +61,14 @@ export default function Hackathon() {
                 <div className="movieWrapper">
                     <h1>Original video resolution</h1>
                     <h2>384 width x 216 height</h2>
-                    <Player className="movie" src="../assets/crop.mp4">
+                    <Player className="movie" src="assets/crop.mp4">
                         <BigPlayButton position="center" />
                     </Player>
                 </div>
                 <div className="movieWrapper">
                     <h1>Video resolution after SRGAN conversion</h1>
                     <h2>1536 width x 864 height</h2>
-                    <Player className="movie" src="../assets/upscale.mp4">
+                    <Player className="movie" src="assets/upscale.mp4">
                         <BigPlayButton position="center" />
                     </Player>
                 </div>

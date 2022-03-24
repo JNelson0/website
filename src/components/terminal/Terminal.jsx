@@ -239,7 +239,7 @@ export default function Terminal({ setTerminalActive }) {
                     target="_blank"
                     aria-label="Resume"
                     rel="noreferrer"
-                    href="/files/JaredNelsonResume.pdf"
+                    href="website/public/files/JaredNelsonResume.pdf"
                 >
                     resume.pdf
                 </a>

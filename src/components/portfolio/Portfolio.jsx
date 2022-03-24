@@ -46,7 +46,7 @@ export default function Portfolio() {
                             : "itemNotSelected"
                     }
                 >
-                    <img src="../assets/WebScraperPic.png" alt="" />
+                    <img src="assets/WebScraperPic.png" alt="" />
                     <h3>Movie Finder</h3>
                 </Link>
                 <Link
@@ -57,7 +57,7 @@ export default function Portfolio() {
                             : "itemNotSelected"
                     }
                 >
-                    <img src="../assets/HackathonPic.png" alt="" />
+                    <img src="assets/HackathonPic.png" alt="" />
                     <h3>Hackathon</h3>
                 </Link>
                 <Link
@@ -68,7 +68,7 @@ export default function Portfolio() {
                             : "itemNotSelected"
                     }
                 >
-                    <img src="../assets/globe.png" alt="" />
+                    <img src="assets/globe.png" alt="" />
                     <h3>Network Monitoring</h3>
                 </Link>
 
@@ -79,7 +79,7 @@ export default function Portfolio() {
                             : "itemNotSelected"
                     }
                 >
-                    <img src="../assets/globe.png" alt="" />
+                    <img src="assets/globe.png" alt="" />
                     <h3>Application</h3>
                 </div>
             </div>

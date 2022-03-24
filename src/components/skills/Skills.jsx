@@ -15,19 +15,19 @@ export default function Skills() {
                     </h1>
                     <div className="itemWrapper">
                         <div className="item">
-                            <img src="/assets/react.png" alt="" />
+                            <img src="assets/react.png" alt="" />
                             <h3>React.js</h3>
                         </div>
                         <div className="item">
-                            <img src="/assets/html.png" alt="" />
+                            <img src="assets/html.png" alt="" />
                             <h3>HTML</h3>
                         </div>
                         <div className="item">
-                            <img src="/assets/css.png" alt="" />
+                            <img src="assets/css.png" alt="" />
                             <h3>CSS</h3>
                         </div>
                         <div className="item">
-                            <img src="/assets/sql.png" alt="" />
+                            <img src="assets/sql.png" alt="" />
                             <h3>MySQL</h3>
                         </div>
                     </div>
@@ -39,19 +39,19 @@ export default function Skills() {
                     </h1>
                     <div className="itemWrapper">
                         <div className="item">
-                            <img src="/assets/python2.png" alt="" />
+                            <img src="assets/python2.png" alt="" />
                             <h3>Python</h3>
                         </div>
                         <div className="item">
-                            <img src="/assets/c++.png" alt="" />
+                            <img src="assets/c++.png" alt="" />
                             <h3>C++</h3>
                         </div>
                         <div className="item">
-                            <img src="/assets/javascript.png" alt="" />
+                            <img src="assets/javascript.png" alt="" />
                             <h3 className="js">JavaScript</h3>
                         </div>
                         <div className="item">
-                            <img src="/assets/c++.png" alt="" />
+                            <img src="assets/c++.png" alt="" />
                             <h3>C++</h3>
                         </div>
                     </div>
@@ -63,11 +63,11 @@ export default function Skills() {
                     </h1>
                     <div className="itemWrapper">
                         <div className="item">
-                            <img src="/assets/github.png" alt="" />
+                            <img src="assets/github.png" alt="" />
                             <h3>Git</h3>
                         </div>
                         <div className="item">
-                            <img src="/assets/office.png" alt="" />
+                            <img src="assets/office.png" alt="" />
                             <h3>Office</h3>
                         </div>
                         <div className="item">
