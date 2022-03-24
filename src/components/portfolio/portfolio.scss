@@ -11,8 +11,10 @@
         align-items: center;
         font-size: 50px;
         height: 25%;
+        overflow: visible;
         @include mobile {
             height: 10%;
+            font-size: 35px;
         }
     }
 
@@ -21,10 +23,12 @@
         list-style: none;
         display: flex;
         overflow: visible;
-
         @include mobile {
             flex-wrap: wrap;
             justify-content: center;
+            li {
+                font-size: 18px;
+            }
         }
     }
 
@@ -33,10 +37,11 @@
         width: 100%;
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
         height: 70%;
         @include mobile {
             margin-top: 10px;
+            flex-direction: column;
+            align-items: center;
         }
 
         .itemSelected {
@@ -57,7 +62,7 @@
             @include mobile {
                 margin: 10px;
                 width: 60%;
-                height: 20%;
+                height: 30%;
                 flex-direction: column;
             }
 
@@ -82,7 +87,7 @@
                 align-content: center;
                 @include mobile {
                     width: 60%;
-                    height: 20%;
+                    height: 30%;
                 }
                 h3 {
                     display: flex;
