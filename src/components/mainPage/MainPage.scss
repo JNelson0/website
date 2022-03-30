@@ -13,7 +13,7 @@
         scrollbar-width: none;
         background-color: $offWhite;
         &::-webkit-scrollbar {
-            width: 10px;
+            width: 12px;
         }
 
         /* Track */
@@ -30,7 +30,7 @@
 
         /* Handle on hover */
         &::-webkit-scrollbar-thumb:hover {
-            background: #b30000;
+            background: $mainColor;
         }
         > * {
             width: 100vw;
