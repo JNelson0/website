@@ -3,7 +3,7 @@ import Terminal from "../terminal/Terminal";
 import { React, useState } from "react";
 
 export default function About() {
-    const [terminalActive, setTerminalActive] = useState(true);
+    const [terminalActive, setTerminalActive] = useState(false);
     return (
         <div className="about" id="about">
             {terminalActive ? (
@@ -44,7 +44,7 @@ export default function About() {
                         className="goBack"
                         onClick={() => setTerminalActive(true)}
                     >
-                        We have to go back!!!
+                        Check this out!!!
                     </div>
                 </div>
             )}
