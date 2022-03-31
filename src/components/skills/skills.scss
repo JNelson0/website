@@ -95,12 +95,12 @@
                 }
             }
             .itemWrapper {
-                height: 75%;
+                height: 65%;
                 width: 100%;
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                align-items: center;
+                align-items: flex-start;
                 justify-content: center;
                 overflow: visible;
                 margin-top: 10px;
@@ -139,7 +139,7 @@
                     }
                     h3 {
                         display: none;
-                        font-size: 40px;
+                        font-size: 35px;
                         position: absolute;
                         color: white;
                         overflow-wrap: normal;

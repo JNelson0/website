@@ -1,6 +1,6 @@
 import "./intro.scss";
-import {init} from "ityped";
-import {useEffect, useRef} from "react";
+import { init } from "ityped";
+import { useEffect, useRef } from "react";
 
 export default function Intro() {
     const textRef = useRef();
@@ -10,25 +10,29 @@ export default function Intro() {
             showCursor: true,
             backDelay: 1500,
             backSpeed: 60,
-            strings:["Developer", "Designer", "Engineer"]
+            strings: ["Developer", "Designer", "Engineer"],
         });
-    },[])
-    return <div className="intro" id="intro">
-        <div className="left">
-            <div className="imgContainer">
-                <img src="assets/man.png" alt="" />
+    }, []);
+    return (
+        <div className="intro" id="intro">
+            <div className="left">
+                <div className="imgContainer">
+                    {/* <img src="assets/man.png" alt="" /> */}
+                    <img src="assets/me.jpeg" alt="" />
+                </div>
+            </div>
+            <div className="right">
+                <div className="wrapper">
+                    <h2>Hi There, I'm</h2>
+                    <h1>Jared Nelson</h1>
+                    <h3>
+                        Software <span ref={textRef}></span>
+                    </h3>
+                </div>
+                <a href="#about">
+                    <img src="assets/down.png" alt="" />
+                </a>
             </div>
         </div>
-        <div className="right">
-            <div className="wrapper">
-                <h2>Hi There, I'm</h2>
-                <h1>Jared Nelson</h1>
-                <h3>Software <span ref={textRef}></span></h3>
-            </div>
-            <a href="#about">
-                <img src="assets/down.png" alt="" />
-            </a>
-            
-        </div>
-    </div>;
+    );
 }

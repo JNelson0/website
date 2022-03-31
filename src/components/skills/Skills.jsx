@@ -16,7 +16,7 @@ export default function Skills() {
                     <div className="itemWrapper">
                         <div className="item">
                             <img src="assets/react.png" alt="" />
-                            <h3>React.js</h3>
+                            <h3>React</h3>
                         </div>
                         <div className="item">
                             <img src="assets/html.png" alt="" />
@@ -27,8 +27,8 @@ export default function Skills() {
                             <h3>CSS</h3>
                         </div>
                         <div className="item">
-                            <img src="assets/sql.png" alt="" />
-                            <h3>MySQL</h3>
+                            <img src="assets/postgres.png" alt="" />
+                            <h3>PostgeSQL</h3>
                         </div>
                     </div>
                 </div>

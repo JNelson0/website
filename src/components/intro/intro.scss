@@ -22,15 +22,16 @@
         }
 
         .imgContainer {
-            width: 700px;
-            height: 700px;
+            width: 60%;
+            height: 80%;
             background-color: $mainColor;
-            border-radius: 50%;
+            border-radius: 45px;
             display: flex;
-            align-items: flex-end;
+            align-items: center;
             justify-content: center;
             position: absolute;
-            border: 30px solid rgb(216, 216, 216);
+            box-shadow: 2px 2px 2px 2px black;
+            border: 20px solid rgb(216, 216, 216);
 
             @include mobile {
                 position: unset;
@@ -38,7 +39,8 @@
 
             img {
                 height: 90%;
-
+                border-radius: 45px;
+                object-fit: cover;
                 @include mobile {
                     height: 70%;
                 }
