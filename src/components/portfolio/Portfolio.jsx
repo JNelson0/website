@@ -68,7 +68,7 @@ export default function Portfolio() {
                             : "itemNotSelected"
                     }
                 >
-                    <img src="assets/NetworkMonitoring.png" alt="" />
+                    <img src="assets/NetworkMonitoring.PNG" alt="" />
                     <h3>Network Monitoring</h3>
                 </Link>
             </div>
