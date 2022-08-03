@@ -10,19 +10,18 @@ import Menu from "../menu/Menu";
 import About from "../about/About";
 
 export default function MainPage() {
-    const [menuOpen, setMenuOpen] = useState(false);
+	const [menuOpen, setMenuOpen] = useState(false);
 
-    return (
-        <div className="mainPage">
-            <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-            <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-            <div className="sections">
-                <Intro />
-                <About />
-                <Portfolio />
-                <Skills />
-                <Contact />
-            </div>
-        </div>
-    );
+	return (
+		<div className="mainPage">
+			<Topbar />
+			<div className="sections">
+				<Intro />
+				<About />
+				{/* <Portfolio /> */}
+				{/* <Skills /> */}
+				<Contact />
+			</div>
+		</div>
+	);
 }

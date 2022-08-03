@@ -1,44 +1,47 @@
 @import "../../global.scss";
 
 .mainPage {
-    height: 100vh;
-    width: 100vw;
-    .sections {
-        width: 100%;
-        height: calc(100vh - 70px);
-        position: relative;
-        top: 70px;
-        scroll-behavior: smooth;
-        scroll-snap-type: y mandatory;
-        scrollbar-width: none;
-        background-color: $offWhite;
-        &::-webkit-scrollbar {
-            width: 12px;
-        }
+	height: 100vh;
+	width: 100vw;
+	.sections {
+		width: 100%;
+		height: calc(100vh - 70px);
+		position: relative;
+		scroll-behavior: smooth;
+		scroll-snap-type: y mandatory;
+		scrollbar-width: none;
+		background-color: $offWhite;
+		&::-webkit-scrollbar {
+			width: 12px;
+		}
 
-        /* Track */
-        &::-webkit-scrollbar-track {
-            box-shadow: inset 0 0 5px grey;
-            border-radius: 10px;
-        }
+		/* Track */
+		&::-webkit-scrollbar-track {
+			box-shadow: inset 0 0 5px grey;
+			border-radius: 10px;
+		}
 
-        /* Handle */
-        &::-webkit-scrollbar-thumb {
-            background: rgb(73, 73, 73);
-            border-radius: 10px;
-        }
+		/* Handle */
+		&::-webkit-scrollbar-thumb {
+			background: rgb(73, 73, 73);
+			border-radius: 10px;
+		}
 
-        /* Handle on hover */
-        &::-webkit-scrollbar-thumb:hover {
-            background: $mainColor;
-        }
-        > * {
-            width: 100vw;
-            height: calc(100vh - 70px);
-            scroll-snap-align: start;
-            @include mobile {
-                scroll-snap-align: unset;
-            }
-        }
-    }
+		/* Handle on hover */
+		&::-webkit-scrollbar-thumb:hover {
+			background: $mainColor;
+		}
+		> * {
+			width: 100vw;
+			height: calc(100vh - 70px);
+			scroll-snap-align: start;
+			@include mobile {
+				scroll-snap-align: unset;
+			}
+		}
+
+		@include mobile {
+			height: unset;
+		}
+	}
 }

@@ -1,151 +1,135 @@
-import "./contact.scss";
-import React, { useRef, useState } from "react";
+import { React, useState, useRef } from "react";
+import { Container, Form, Row, Col, Button } from "react-bootstrap";
 import emailjs from "emailjs-com";
+import "./contact.scss";
 
 export default function Contact() {
-    const form = useRef();
+	const formInfo = useRef();
 
-    const [emailDetails, setEmailDetails] = useState({
-        name: "",
-        email: "",
-        message: "",
-    });
+	const [validated, setValidated] = useState(false);
 
-    const handleChange = (e) => {
-        setEmailDetails({
-            ...emailDetails,
-            [e.target.name]: e.target.value,
-        });
-    };
+	const [info, setInfo] = useState({
+		name: "",
+		email: "",
+		message: "",
+	});
 
-    const resetInput = () => {
-        setEmailDetails({
-            name: "",
-            email: "",
-            message: "",
-        });
-    };
+	const handleChange = (e) => {
+		setInfo({
+			...info,
+			[e.target.name]: e.target.value,
+		});
+	};
 
-    const [confirm, setConfirm] = useState(false);
+	const handleSubmit = (event) => {
+		const form = event.currentTarget;
+		if (form.checkValidity() === false) {
+			event.preventDefault();
+			event.stopPropagation();
+		}
 
-    const emailSubmit = (e) => {
-        e.preventDefault();
-        setConfirm(true);
-    };
+		setValidated(true);
+		if (validated) {
+			sendEmail(event);
+		}
+	};
 
-    function sendEmail(e) {
-        console.log(form.current);
-        emailjs
-            .sendForm(
-                "mygmail",
-                "recieve_template",
-                form.current,
-                "user_FPHoEtpHVXAxEgNia64ri"
-            )
-            .then(
-                (result) => {
-                    console.log(result.text);
-                },
-                (error) => {
-                    console.log(error.text);
-                }
-            );
+	function sendEmail(e) {
+		emailjs
+			.sendForm(
+				"mygmail",
+				"recieve_template",
+				formInfo.current,
+				"user_FPHoEtpHVXAxEgNia64ri"
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
 
-        emailjs
-            .sendForm(
-                "mygmail",
-                "send_template",
-                form.current,
-                "user_FPHoEtpHVXAxEgNia64ri"
-            )
-            .then(
-                (result) => {
-                    console.log(result.text);
-                },
-                (error) => {
-                    console.log(error.text);
-                }
-            );
-        resetInput();
-        setConfirm(false);
-    }
-    const handleConfirmButton = (e) => {
-        sendEmail(e);
-    };
+		emailjs
+			.sendForm(
+				"mygmail",
+				"send_template",
+				formInfo.current,
+				"user_FPHoEtpHVXAxEgNia64ri"
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
+		// resetInput();
+		// setConfirm(false);
+	}
 
-    const messageConfirmation = (e) => {
-        return (
-            <div className="confirmation">
-                <h1 className="messageDetials">Your message to me!</h1>
-                <div className="details">
-                    <div className="emailName">
-                        Your name:
-                        <br /> {emailDetails.name}
-                    </div>
-                    <div className="emailAddress">
-                        Your email address: <br />
-                        {emailDetails.email}
-                    </div>
-                    <div className="emailMessageTitle">Your message:</div>
-                    <div className="emailMessage">{emailDetails.message}</div>
-                </div>
-
-                <span>Are you ready to send?</span>
-                <div className="buttonWrapper">
-                    <button onClick={() => handleConfirmButton(e)}>Yes</button>
-                    <button onClick={() => setConfirm(false)}>Not yet</button>
-                </div>
-            </div>
-        );
-    };
-
-    return (
-        <div className="contact" id="contact">
-            {confirm ? messageConfirmation() : <></>}
-            <form className="emailWrapper" ref={form} onSubmit={emailSubmit}>
-                <div className="sendMe">Send Me a Message!</div>
-                <label>Name:</label>
-                <input
-                    className="info"
-                    placeholder="Enter Your Name"
-                    type="text"
-                    name="name"
-                    value={emailDetails.name}
-                    onChange={handleChange}
-                    required
-                />
-                <label>Email:</label>
-                <input
-                    className="info"
-                    placeholder="Enter Your Email address"
-                    type="email"
-                    name="email"
-                    value={emailDetails.email}
-                    onChange={handleChange}
-                    required
-                />
-                <label>Message:</label>
-                <textarea
-                    id="textArea"
-                    placeholder="Empty Message"
-                    name="message"
-                    value={emailDetails.message}
-                    onChange={handleChange}
-                    required
-                />
-                {confirm ? (
-                    <></>
-                ) : (
-                    <div className="submitButtons">
-                        <input
-                            type="button"
-                            value="Clear"
-                            onClick={resetInput}
-                        />
-                        <input type="submit" value="Send" />
-                    </div>
-                )}
-            </form>
-        </div>
-    );
+	return (
+		<Container className="contact" id="contact" md>
+			<h1>Send me a message!</h1>
+			<Form
+				className="form"
+				noValidate
+				ref={formInfo}
+				validated={validated}
+				onSubmit={handleSubmit}
+			>
+				<Row className="mb-3">
+					<Form.Group md="4" controlId="validationCustom01">
+						<Form.Label>Name</Form.Label>
+						<Form.Control
+							required
+							type="text"
+							placeholder="Your name"
+							name="name"
+							value={info.name}
+							onChange={handleChange}
+						/>
+						<Form.Control.Feedback type="invalid">
+							Please enter your name.
+						</Form.Control.Feedback>
+					</Form.Group>
+				</Row>
+				<Row className="mb-3">
+					<Form.Group md="4" controlId="validationCustom02">
+						<Form.Label>Email</Form.Label>
+						<Form.Control
+							required
+							type="email"
+							placeholder="Example@gmail.com"
+							name="email"
+							value={info.email}
+							onChange={handleChange}
+						/>
+						<Form.Control.Feedback type="invalid">
+							Please enter an email address.
+						</Form.Control.Feedback>
+					</Form.Group>
+				</Row>
+				<Row className="mb-3">
+					<Form.Group md="4" controlId="ValidationCustom03">
+						<Form.Label>Message</Form.Label>
+						<Form.Control
+							required
+							as="textarea"
+							rows={3}
+							name="message"
+							value={info.message}
+							onChange={handleChange}
+						/>
+					</Form.Group>
+				</Row>
+				<Button type="submit">Submit</Button>
+				<Button className="m-3" type="reset" variant="secondary">
+					Clear
+				</Button>
+			</Form>
+		</Container>
+	);
 }
