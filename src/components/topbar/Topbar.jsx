@@ -4,13 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 function CollapsibleExample() {
 	return (
-		<Navbar
-			collapseOnSelect
-			expand="lg"
-			bg="dark"
-			variant="dark"
-			style={{ height: 70 }}
-		>
+		<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
 			<Container fluid>
 				<Navbar.Brand href="#intro">Jared Nelson</Navbar.Brand>
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />

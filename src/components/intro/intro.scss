@@ -94,13 +94,13 @@
 	justify-content: center;
 	overflow: hidden;
 	border-radius: 45px;
-	box-shadow: 2px 2px 2px 2px black;
+	// box-shadow: 2px 2px 2px 2px black;
 	border: 20px solid rgb(216, 216, 216);
 
 	@include mobile {
 		width: 300px;
 		margin-bottom: 5px;
 		border: 15px solid rgb(216, 216, 216);
-		box-shadow: 1px 1px 1px 1px black;
+		// box-shadow: 1px 1px 1px 1px black;
 	}
 }

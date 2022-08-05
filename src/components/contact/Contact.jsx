@@ -123,6 +123,9 @@ export default function Contact() {
 							value={info.message}
 							onChange={handleChange}
 						/>
+						<Form.Control.Feedback type="invalid">
+							Please send me a message.
+						</Form.Control.Feedback>
 					</Form.Group>
 				</Row>
 				<Button type="submit">Submit</Button>
