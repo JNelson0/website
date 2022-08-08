@@ -1,109 +1,131 @@
 @import "../../global.scss";
 
 .portfolio {
-	background-color: $offWhite;
 	display: flex;
-	flex-direction: column;
 	align-items: center;
-	height: calc(100vh - 70px);
-	h1 {
-		display: flex;
-		align-items: center;
-		font-size: 50px;
-		height: 25%;
-		overflow: visible;
-		@include mobile {
-			height: 10%;
-			font-size: 35px;
-		}
+	flex-direction: column;
+
+	@include mobile {
+		display: inline;
 	}
 
-	ul {
-		margin: 10px;
-		list-style: none;
-		display: flex;
-		overflow: visible;
+	.cont {
 		@include mobile {
-			flex-wrap: wrap;
-			justify-content: center;
-			li {
-				font-size: 18px;
-			}
+			height: unset;
 		}
-	}
-
-	.container {
-		margin-top: 50px;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		height: 70%;
-		@include mobile {
-			margin-top: 10px;
-			flex-direction: column;
-			align-items: center;
-		}
-
-		.itemSelected {
-			background-color: white;
-			width: 286px;
-			height: 150px;
-			border-radius: 20px;
-			border: 1px solid gray;
-			margin: 10px 20px;
+		.cards {
 			display: flex;
-			align-items: center;
-			justify-content: center;
-			color: white;
-			transition: all 0.5s ease;
 			flex-direction: row;
-			cursor: pointer;
-
+			justify-content: center;
 			@include mobile {
-				margin: 10px;
-				width: 60%;
-				height: 30%;
 				flex-direction: column;
+				align-items: center;
 			}
-
-			h3 {
-				position: absolute;
-				font-size: 40px;
-				display: none;
-				@include mobile {
-					font-size: 25px;
-				}
-			}
-
-			img {
-				width: 100%;
-				height: 100%;
-				z-index: 1;
-			}
-			&:hover {
-				background-color: $mainColor;
-				width: 580px;
-				height: 304px;
-				align-content: center;
-				@include mobile {
-					width: 60%;
-					height: 30%;
-				}
-				h3 {
-					display: flex;
-				}
-				img {
-					opacity: 0.7;
-					z-index: 0;
-				}
-			}
-		}
-		.itemNotSelected {
-			display: none;
-		}
-
-		@include mobile {
-			width: 100%;
 		}
 	}
+	// background-color: $offWhite;
+	// display: flex;
+	// flex-direction: column;
+	// align-items: center;
+	// height: calc(100vh - 70px);
+	// h1 {
+	// 	display: flex;
+	// 	align-items: center;
+	// 	font-size: 50px;
+	// 	height: 25%;
+	// 	overflow: visible;
+	// 	@include mobile {
+	// 		height: 10%;
+	// 		font-size: 35px;
+	// 	}
+	// }
+
+	// ul {
+	// 	margin: 10px;
+	// 	list-style: none;
+	// 	display: flex;
+	// 	overflow: visible;
+	// 	@include mobile {
+	// 		flex-wrap: wrap;
+	// 		justify-content: center;
+	// 		li {
+	// 			font-size: 18px;
+	// 		}
+	// 	}
+	// }
+
+	// .container {
+	// 	margin-top: 50px;
+	// 	width: 100%;
+	// 	display: flex;
+	// 	justify-content: center;
+	// 	height: 70%;
+	// 	@include mobile {
+	// 		margin-top: 10px;
+	// 		flex-direction: column;
+	// 		align-items: center;
+	// 	}
+
+	// 	.itemSelected {
+	// 		background-color: white;
+	// 		width: 286px;
+	// 		height: 150px;
+	// 		border-radius: 20px;
+	// 		border: 1px solid gray;
+	// 		margin: 10px 20px;
+	// 		display: flex;
+	// 		align-items: center;
+	// 		justify-content: center;
+	// 		color: white;
+	// 		transition: all 0.5s ease;
+	// 		flex-direction: row;
+	// 		cursor: pointer;
+
+	// 		@include mobile {
+	// 			margin: 10px;
+	// 			width: 60%;
+	// 			height: 30%;
+	// 			flex-direction: column;
+	// 		}
+
+	// 		h3 {
+	// 			position: absolute;
+	// 			font-size: 40px;
+	// 			display: none;
+	// 			@include mobile {
+	// 				font-size: 25px;
+	// 			}
+	// 		}
+
+	// 		img {
+	// 			width: 100%;
+	// 			height: 100%;
+	// 			z-index: 1;
+	// 		}
+	// 		&:hover {
+	// 			background-color: $mainColor;
+	// 			width: 580px;
+	// 			height: 304px;
+	// 			align-content: center;
+	// 			@include mobile {
+	// 				width: 60%;
+	// 				height: 30%;
+	// 			}
+	// 			h3 {
+	// 				display: flex;
+	// 			}
+	// 			img {
+	// 				opacity: 0.7;
+	// 				z-index: 0;
+	// 			}
+	// 		}
+	// 	}
+	// 	.itemNotSelected {
+	// 		display: none;
+	// 	}
+
+	// 	@include mobile {
+	// 		width: 100%;
+	// 	}
+	// }
 }

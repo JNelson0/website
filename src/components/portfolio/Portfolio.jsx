@@ -1,77 +1,72 @@
 import "./portfolio.scss";
-import PortfolioList from "../portfolioList/PortfolioList";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Container, Card, Button, Row } from "react-bootstrap";
+import webScraping from "../../assets/WebScraperPic.png";
+import hackathon from "../../assets/HackathonPic.png";
+import network from "../../assets/NetworkMonitoring.png";
 
 export default function Portfolio() {
-    const [selected, setSelected] = useState("featured");
+	return (
+		<div className="portfolio" id="portfolio">
+			<h1>Portfolio</h1>
 
-    const list = [
-        {
-            id: "featured",
-            title: "Featured",
-        },
-        {
-            id: "web",
-            title: "Web App",
-        },
-        {
-            id: "school",
-            title: "School/Internship",
-        },
-        {
-            id: "hackathon",
-            title: "Hackathon",
-        },
-    ];
-    return (
-        <div className="portfolio" id="portfolio">
-            <h1>Portfolio</h1>
-            <ul>
-                {list.map((item) => (
-                    <PortfolioList
-                        title={item.title}
-                        active={selected === item.id}
-                        setSelected={setSelected}
-                        id={item.id}
-                    />
-                ))}
-            </ul>
-            <div className="container">
-                <Link
-                    to="/MovieScraper"
-                    className={
-                        selected === "featured" || selected === "web"
-                            ? "itemSelected"
-                            : "itemNotSelected"
-                    }
-                >
-                    <img src="assets/WebScraperPic.PNG" alt="" />
-                    <h3>Movie Finder</h3>
-                </Link>
-                <Link
-                    to="/Hackathon"
-                    className={
-                        selected === "featured" || selected === "hackathon"
-                            ? "itemSelected"
-                            : "itemNotSelected"
-                    }
-                >
-                    <img src="assets/HackathonPic.PNG" alt="" />
-                    <h3>Hackathon</h3>
-                </Link>
-                <Link
-                    to="/NetworkMonitor"
-                    className={
-                        selected === "featured" || selected === "school"
-                            ? "itemSelected"
-                            : "itemNotSelected"
-                    }
-                >
-                    <img src="assets/NetworkMonitoring.PNG" alt="" />
-                    <h3>Network Monitoring</h3>
-                </Link>
-            </div>
-        </div>
-    );
+			<Container fluid className="cont">
+				<div className="cards ">
+					<Card
+						className="m-3"
+						style={{ width: "18rem", overflow: "visible" }}
+					>
+						<Card.Img variant="top" src={webScraping} />
+						<Card.Body>
+							<Card.Title>Python Web Scraping</Card.Title>
+							<Card.Text>
+								Some quick example text to build on the card
+								title and make up the bulk of the card's
+								content.
+							</Card.Text>
+							<Button href="/MovieScraper" variant="primary">
+								More about the project
+							</Button>
+						</Card.Body>
+					</Card>
+
+					<Card
+						className="m-3"
+						style={{ width: "18rem", overflow: "visible" }}
+					>
+						<Card.Img variant="top" src={hackathon} />
+						<Card.Body>
+							<Card.Title>Card Title</Card.Title>
+							<Card.Text>
+								Some quick example text to build on the card
+								title and make up the bulk of the card's
+								content.
+							</Card.Text>
+							<Button href="/Hackathon" variant="primary">
+								More about the project
+							</Button>
+						</Card.Body>
+					</Card>
+
+					<Card
+						className="m-3"
+						style={{ width: "18rem", overflow: "visible" }}
+					>
+						<Card.Img variant="top" src={network} />
+						<Card.Body>
+							<Card.Title>Network Monitoring</Card.Title>
+							<Card.Text>
+								Some quick example text to build on the card
+								title and make up the bulk of the card's
+								content.
+							</Card.Text>
+							<Button href="/NetworkMonitor" variant="primary">
+								More about the project
+							</Button>
+						</Card.Body>
+					</Card>
+				</div>
+			</Container>
+		</div>
+	);
 }

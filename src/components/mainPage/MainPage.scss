@@ -11,6 +11,7 @@
 		scroll-snap-type: y mandatory;
 		scrollbar-width: none;
 		background-color: $offWhite;
+
 		&::-webkit-scrollbar {
 			width: 12px;
 		}
@@ -23,13 +24,14 @@
 
 		/* Handle */
 		&::-webkit-scrollbar-thumb {
-			background: rgb(73, 73, 73);
+			background: #212529;
+
 			border-radius: 10px;
 		}
 
 		/* Handle on hover */
 		&::-webkit-scrollbar-thumb:hover {
-			background: $mainColor;
+			background: #3c434b;
 		}
 		> * {
 			width: 100vw;

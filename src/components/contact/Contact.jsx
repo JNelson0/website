@@ -1,12 +1,14 @@
 import { React, useState, useRef } from "react";
-import { Container, Form, Row, Col, Button } from "react-bootstrap";
+import { Container, Form, Row, Button, Modal } from "react-bootstrap";
 import emailjs from "emailjs-com";
 import "./contact.scss";
+import { Navigation } from "@mui/icons-material";
 
 export default function Contact() {
 	const formInfo = useRef();
 
 	const [validated, setValidated] = useState(false);
+	const [email, setEmail] = useState(false);
 
 	const [info, setInfo] = useState({
 		name: "",
@@ -26,12 +28,34 @@ export default function Contact() {
 		if (form.checkValidity() === false) {
 			event.preventDefault();
 			event.stopPropagation();
+		} else {
+			setEmail(true);
 		}
 
 		setValidated(true);
-		if (validated) {
+
+		if (email) {
 			sendEmail(event);
 		}
+	};
+
+	const [show, setShow] = useState(false);
+
+	const handleClear = () => {
+		resetForm();
+		setShow(false);
+	};
+
+	const handleClose = () => setShow(false);
+	const handleShow = () => setShow(true);
+
+	const resetForm = () => {
+		setInfo({
+			name: "",
+			email: "",
+			message: "",
+		});
+		setValidated(false);
 	};
 
 	function sendEmail(e) {
@@ -66,8 +90,7 @@ export default function Contact() {
 					console.log(error.text);
 				}
 			);
-		// resetInput();
-		// setConfirm(false);
+		setEmail(false);
 	}
 
 	return (
@@ -79,6 +102,7 @@ export default function Contact() {
 				ref={formInfo}
 				validated={validated}
 				onSubmit={handleSubmit}
+				onReset={handleShow}
 			>
 				<Row className="mb-3">
 					<Form.Group md="4" controlId="validationCustom01">
@@ -133,6 +157,20 @@ export default function Contact() {
 					Clear
 				</Button>
 			</Form>
+			<Modal show={show} onHide={handleClose}>
+				<Modal.Header closeButton>
+					<Modal.Title>Clear your message to me</Modal.Title>
+				</Modal.Header>
+				<Modal.Body>Are you sure you want to clear?</Modal.Body>
+				<Modal.Footer>
+					<Button variant="secondary" onClick={handleClose}>
+						Cancel
+					</Button>
+					<Button variant="primary" onClick={handleClear}>
+						Clear
+					</Button>
+				</Modal.Footer>
+			</Modal>
 		</Container>
 	);
 }
