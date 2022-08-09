@@ -2,7 +2,6 @@ import { React, useState, useRef } from "react";
 import { Container, Form, Row, Button, Modal } from "react-bootstrap";
 import emailjs from "emailjs-com";
 import "./contact.scss";
-import { Navigation } from "@mui/icons-material";
 
 export default function Contact() {
 	const formInfo = useRef();

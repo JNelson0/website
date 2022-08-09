@@ -2,18 +2,14 @@
 .contact {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 form {
 	position: relative;
 	width: 50%;
-	height: 80%;
-	margin: auto;
-}
-
-h1 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 20%;
+	@include mobile {
+		width: 80%;
+	}
 }
