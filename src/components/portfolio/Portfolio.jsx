@@ -1,6 +1,5 @@
 import "./portfolio.scss";
-import { useState } from "react";
-import { Container, Card, Button, Row } from "react-bootstrap";
+import { Container, Card, Button } from "react-bootstrap";
 import webScraping from "../../assets/WebScraperPic.png";
 import hackathon from "../../assets/HackathonPic.png";
 import network from "../../assets/NetworkMonitoring.png";
@@ -12,55 +11,67 @@ export default function Portfolio() {
 
 			<Container fluid className="cont">
 				<div className="cards ">
-					<Card
-						className="m-3"
-						style={{ width: "18rem", overflow: "visible" }}
-					>
-						<Card.Img variant="top" src={webScraping} />
-						<Card.Body>
+					<Card className="m-3 card">
+						<Card.Img
+							variant="top"
+							src={webScraping}
+							style={{ height: "40%" }}
+						/>
+						<Card.Body style={{ overflow: "visible" }}>
 							<Card.Title>Python Web Scraping</Card.Title>
 							<Card.Text>
 								Some quick example text to build on the card
 								title and make up the bulk of the card's
 								content.
 							</Card.Text>
-							<Button href="/MovieScraper" variant="primary">
+							<Button
+								href="/Portfolio#MovieScraper"
+								variant="primary"
+							>
 								More about the project
 							</Button>
 						</Card.Body>
 					</Card>
 
-					<Card
-						className="m-3"
-						style={{ width: "18rem", overflow: "visible" }}
-					>
-						<Card.Img variant="top" src={hackathon} />
-						<Card.Body>
-							<Card.Title>Card Title</Card.Title>
+					<Card className="m-3 card">
+						<Card.Img
+							variant="top"
+							src={hackathon}
+							style={{ height: "40%" }}
+						/>
+						<Card.Body style={{ overflow: "visible" }}>
+							<Card.Title>SRGAN Video Upscaling</Card.Title>
 							<Card.Text>
 								Some quick example text to build on the card
 								title and make up the bulk of the card's
 								content.
 							</Card.Text>
-							<Button href="/Hackathon" variant="primary">
+							<Button
+								href="/Portfolio#Hackathon"
+								variant="primary"
+							>
 								More about the project
 							</Button>
 						</Card.Body>
 					</Card>
 
-					<Card
-						className="m-3"
-						style={{ width: "18rem", overflow: "visible" }}
-					>
-						<Card.Img variant="top" src={network} />
-						<Card.Body>
+					<Card className="m-3 card">
+						<Card.Img
+							variant="top"
+							src={network}
+							style={{ height: "40%" }}
+						/>
+						<Card.Body style={{ overflow: "visible" }}>
 							<Card.Title>Network Monitoring</Card.Title>
 							<Card.Text>
 								Some quick example text to build on the card
 								title and make up the bulk of the card's
 								content.
 							</Card.Text>
-							<Button href="/NetworkMonitor" variant="primary">
+							<Button
+								href="/Portfolio#NetworkMonitor"
+								variant="primary"
+							>
 								More about the project
 							</Button>
 						</Card.Body>

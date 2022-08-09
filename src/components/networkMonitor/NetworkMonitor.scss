@@ -1,80 +1,118 @@
 @import "../../global.scss";
 
 .networkMonitor {
-    background-color: $offWhite;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .homeButton {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin: 20px;
-        height: 80px;
-        width: 120px;
-        font-size: 35px;
-        font-weight: 600;
-        background-color: $mainColor;
-        color: white;
-        border-radius: 45px;
-        transition: all 0.6s;
-        text-decoration: none;
-        border: 3px solid $mainColor;
-        @include mobile {
-            position: relative;
-            width: 100%;
-            border-radius: 0;
-            margin: 0;
-            height: 10%;
-        }
-        &:hover {
-            cursor: pointer;
-            background-color: white;
-            color: $mainColor;
-        }
-    }
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	.container {
+		display: flex;
 
-    h1 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 10%;
-        font-size: 50px;
-        font-weight: 700;
-        @include mobile {
-            font-size: 30px;
-        }
-    }
-    .download {
-        display: flex;
-        height: 8%;
-        justify-content: center;
-        font-size: 25px;
-        width: 25%;
-        @include mobile {
-            width: 100%;
-        }
-    }
-    .pdf {
-        display: flex;
-        height: 85%;
-        width: 100%;
-        justify-content: center;
-        @include mobile {
-            height: 75%;
-        }
-        .pdfFile {
-            width: 50%;
-            height: 90%;
-            @include mobile {
-                width: 100%;
-            }
-        }
-    }
+		height: 80%;
+		align-items: center;
+		overflow: visible;
+		@include mobile {
+			height: 100%;
+			width: 80%;
+			justify-content: center;
+			overflow-y: scroll;
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+
+		h1 {
+			text-align: center;
+			margin-bottom: 75px;
+			@include mobile {
+				margin-bottom: 25px;
+			}
+		}
+		width: 75%;
+		.nav {
+			@include mobile {
+				margin-bottom: 15px;
+			}
+		}
+		video {
+			width: 100%;
+		}
+	}
 }
+// .networkMonitor {
+//     background-color: $offWhite;
+//     height: 100%;
+//     width: 100%;
+//     overflow: hidden;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     .homeButton {
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         margin: 20px;
+//         height: 80px;
+//         width: 120px;
+//         font-size: 35px;
+//         font-weight: 600;
+//         background-color: $mainColor;
+//         color: white;
+//         border-radius: 45px;
+//         transition: all 0.6s;
+//         text-decoration: none;
+//         border: 3px solid $mainColor;
+//         @include mobile {
+//             position: relative;
+//             width: 100%;
+//             border-radius: 0;
+//             margin: 0;
+//             height: 10%;
+//         }
+//         &:hover {
+//             cursor: pointer;
+//             background-color: white;
+//             color: $mainColor;
+//         }
+//     }
+
+//     h1 {
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         height: 10%;
+//         font-size: 50px;
+//         font-weight: 700;
+//         @include mobile {
+//             font-size: 30px;
+//         }
+//     }
+//     .download {
+//         display: flex;
+//         height: 8%;
+//         justify-content: center;
+//         font-size: 25px;
+//         width: 25%;
+//         @include mobile {
+//             width: 100%;
+//         }
+//     }
+//     .pdf {
+//         display: flex;
+//         height: 85%;
+//         width: 100%;
+//         justify-content: center;
+//         @include mobile {
+//             height: 75%;
+//         }
+//         .pdfFile {
+//             width: 50%;
+//             height: 90%;
+//             @include mobile {
+//                 width: 100%;
+//             }
+//         }
+//     }
+// }

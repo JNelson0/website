@@ -1,7 +1,7 @@
 import "./intro.scss";
 import { init } from "ityped";
 import { useEffect, useRef } from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Col, Image } from "react-bootstrap";
 
 import me from "../../assets/me.jpeg";
 import arrow from "../../assets/down.png";
@@ -33,18 +33,6 @@ export default function Intro() {
 					<img src={arrow} alt="" />
 				</a>
 			</Col>
-
-			{/* <div className="intro" id="intro">
-				<div className="left">
-					<div className="imgContainer"></div>
-				</div>
-				<div className="right">
-					<div className="wrapper"></div>
-					<a href="#about">
-						<img src="assets/down.png" alt="" />
-					</a>
-				</div>
-			</div> */}
 		</Container>
 	);
 }

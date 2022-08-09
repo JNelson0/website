@@ -1,12 +1,9 @@
 import "./about.scss";
-import Terminal from "../terminal/Terminal";
-import { React, useState } from "react";
+import { React } from "react";
 
-import { Button, Row, Col, Container } from "react-bootstrap";
-import { Calculate } from "@mui/icons-material";
+import { Button, Col, Container } from "react-bootstrap";
 
 export default function About() {
-	const [terminalActive, setTerminalActive] = useState(false);
 	return (
 		<Container className="outer" id="about" fluid>
 			<Col className="c1" md>

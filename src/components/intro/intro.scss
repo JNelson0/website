@@ -1,22 +1,20 @@
 @import "../../global.scss";
 
 .container {
-	width: 70%;
 	display: flex;
-	flex-direction: row;
-
 	@include mobile {
-		margin-top: 50px;
 		flex-direction: column;
 	}
 }
 
 .left {
-	height: calc(100vh - 70px);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	position: relative;
+	@include mobile {
+		margin-top: 50px;
+	}
 }
 .right {
 	display: flex;
