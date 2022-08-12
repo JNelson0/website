@@ -1,179 +1,35 @@
-@import "../../global.scss";
-
 .skills {
-    background-color: $offWhite;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	.cont {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-    @include mobile {
-        justify-content: flex-start;
-    }
-    h1 {
-        margin-top: 25px;
-        font-size: 50px;
-        height: 10%;
-        @include mobile {
-            font-size: 35px;
-            margin-top: 10px;
-        }
-    }
-    .span1 {
-        width: 25%;
-        height: 5%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+		.col {
+			display: flex;
+			height: 100%;
+			width: 100%;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-evenly;
 
-        @include mobile {
-            width: 75%;
-            height: 8%;
-            text-align: center;
-            font-size: 15px;
-        }
-    }
+			.rowLeft {
+				display: flex;
+				flex-direction: column;
+				width: 90%;
+			}
+			.rowRight {
+				display: flex;
+				flex-direction: column;
+				width: 90%;
 
-    .container {
-        width: 100%;
-        height: calc(85% - 10px);
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        @include mobile {
-            flex-direction: column;
-            justify-content: flex-start;
-            height: calc(80% - 25px);
-        }
-
-        .left {
-            border-right: 1px solid hsla(0, 0%, 0%, 0.3);
-        }
-        .middle {
-            border-right: 1px solid hsla(0, 0%, 0%, 0.3);
-        }
-        .section {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            width: 28%;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            @include mobile {
-                height: 33%;
-                width: 100%;
-            }
-
-            h1 {
-                display: flex;
-                flex-direction: column;
-                height: 15%;
-
-                @include mobile {
-                    font-size: 30px;
-                    overflow: visible;
-                }
-
-                span {
-                    display: flex;
-
-                    transition: all 0.5s ease;
-                    width: 0%;
-                    border: 0px solid black;
-                    margin-top: 10px;
-                }
-                &:hover {
-                    span {
-                        border: 1px solid black;
-                        width: 100%;
-                        @include mobile {
-                            display: none;
-                        }
-                    }
-                }
-            }
-            .itemWrapper {
-                height: 65%;
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                align-items: flex-start;
-                justify-content: center;
-                overflow: visible;
-                margin-top: 10px;
-
-                .item {
-                    background-color: white;
-                    height: 25%;
-                    width: 35%;
-                    border: 1px solid black;
-                    border-radius: 45px;
-                    margin: 25px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    transition: all 0.5s ease;
-
-                    @include mobile {
-                        width: 30%;
-                        height: 30%;
-                        margin: 10px;
-                    }
-
-                    img {
-                        height: 95%;
-                        width: 95%;
-                        object-fit: contain;
-                        z-index: 1;
-                    }
-
-                    h2 {
-                        position: absolute;
-                        font-size: 50px;
-                        @include mobile {
-                            font-size: 30px;
-                        }
-                    }
-                    h3 {
-                        display: none;
-                        font-size: 35px;
-                        position: absolute;
-                        color: white;
-                        overflow-wrap: normal;
-                        overflow-y: hidden;
-                        justify-content: center;
-                        align-items: center;
-
-                        @include mobile {
-                            font-size: 20px;
-                        }
-                    }
-                    .oop {
-                        text-align: center;
-                        position: relative;
-                        font-size: 24px;
-                        @include mobile {
-                            font-size: 12px;
-                        }
-                    }
-
-                    &:hover {
-                        cursor: pointer;
-                        background-color: $mainColor;
-
-                        img {
-                            opacity: 0.6;
-                            z-index: 0;
-                        }
-                        h3 {
-                            display: flex;
-                        }
-                    }
-                }
-            }
-        }
-    }
+				h2 {
+					text-align: center;
+				}
+				h4 {
+					width: 80%;
+				}
+			}
+		}
+	}
 }

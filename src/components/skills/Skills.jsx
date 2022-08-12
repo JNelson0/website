@@ -1,88 +1,79 @@
 import "./skills.scss";
+import {
+	Container,
+	Row,
+	Col,
+	ProgressBar,
+	Card,
+	Button,
+} from "react-bootstrap";
 
 export default function Skills() {
-    return (
-        <div className="skills" id="skills">
-            <h1>Technical Skills</h1>
-            <span className="span1">
-                Below are some of my skills and I'm always striving for more!
-            </span>
-            <div className="container">
-                <div className="left section">
-                    <h1>
-                        Web Development
-                        <span className="webSpan" />
-                    </h1>
-                    <div className="itemWrapper">
-                        <div className="item">
-                            <img src="assets/react.png" alt="" />
-                            <h3>React</h3>
-                        </div>
-                        <div className="item">
-                            <img src="assets/html.png" alt="" />
-                            <h3>HTML</h3>
-                        </div>
-                        <div className="item">
-                            <img src="assets/css.png" alt="" />
-                            <h3>CSS</h3>
-                        </div>
-                        <div className="item">
-                            <img src="assets/postgres.png" alt="" />
-                            <h3>PostgeSQL</h3>
-                        </div>
-                    </div>
-                </div>
-                <div className="middle section">
-                    <h1>
-                        Main Languages
-                        <span className="webSpan" />
-                    </h1>
-                    <div className="itemWrapper">
-                        <div className="item">
-                            <img src="assets/python2.png" alt="" />
-                            <h3>Python</h3>
-                        </div>
-                        <div className="item">
-                            <img src="assets/c++.png" alt="" />
-                            <h3>C++</h3>
-                        </div>
-                        <div className="item">
-                            <img src="assets/javascript.png" alt="" />
-                            <h3 className="js">JavaScript</h3>
-                        </div>
-                        {/* <div className="item">
-                            <img src="assets/c++.png" alt="" />
-                            <h3>C++</h3>
-                        </div> */}
-                    </div>
-                </div>
-                <div className="right section">
-                    <h1>
-                        Fundamental Skills
-                        <span className="webSpan" />
-                    </h1>
-                    <div className="itemWrapper">
-                        <div className="item">
-                            <img src="assets/github.png" alt="" />
-                            <h3>Git</h3>
-                        </div>
-                        <div className="item">
-                            <img src="assets/office.png" alt="" />
-                            <h3>Office</h3>
-                        </div>
-                        <div className="item">
-                            <h2>OOP</h2>
-                            <h3 className="oop">Object Oriented Programming</h3>
-                        </div>
-                        <div className="item">
-                            <h2>DP/DS</h2>
-                            <h3 className="oop">
-                                Design Patterns and Data Structures
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+	return (
+		<div className="skills" id="skills">
+			<Container fluid className="cont">
+				<Col md className="col">
+					<div className="rowLeft">
+						<h1>My Journey</h1>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Tenetur asperiores, blanditiis tempore,
+							assumenda vero quae dignissimos autem voluptate
+							ipsum officia voluptatum ut ad nulla alias hic
+							quibusdam architecto a repellendus!
+						</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Tenetur asperiores, blanditiis tempore,
+							assumenda vero quae dignissimos autem voluptate
+							ipsum officia voluptatum ut ad nulla alias hic
+							quibusdam architecto a repellendus!
+						</p>
+					</div>
+					<Card>
+						<Card.Header as="h5">Key Achievement</Card.Header>
+						<Card.Body>
+							<Card.Title>Hackathon 1st place</Card.Title>
+							<Card.Text>
+								First place in Machine Learning and Artificial
+								intelligence category. Creating a video
+								streaming solution for people with low internet
+								bandwidth using SRGAN for video upscaling.
+							</Card.Text>
+							<Button variant="primary" href="/#Hackathon">
+								Check out the project!
+							</Button>
+						</Card.Body>
+					</Card>
+				</Col>
+
+				<Col md className="col">
+					<div className="rowRight">
+						<h2>Web Developement</h2>
+						<h4>React.js</h4>
+						<ProgressBar
+							variant="blue"
+							animated
+							now={85}
+							className="mb-3"
+						/>
+						<h4>Angular</h4>
+						<ProgressBar variant="blue" animated now={50} />
+					</div>
+					<div className="rowRight">
+						<h2>Software Development</h2>
+						<h4 className="python">Python</h4>
+						<ProgressBar
+							variant="blue"
+							animated
+							now={95}
+							className="mb-3"
+						/>
+						<h4 className="c">C++</h4>
+						<ProgressBar variant="blue" animated now={70} />
+					</div>
+				</Col>
+			</Container>
+		</div>
+	);
 }
