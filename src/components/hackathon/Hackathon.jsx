@@ -45,24 +45,44 @@ export default function Hackathon() {
 									<Tab.Pane eventKey="first">
 										<h2>Summary</h2>
 										<p>
-											Lorem ipsum dolor sit amet
-											consectetur adipisicing elit. Quas
-											distinctio consequatur possimus odit
-											sunt enim, esse neque. Repellendus,
-											officiis dolor. Corrupti, fuga
-											consequatur. Repellat debitis
-											quibusdam fugiat cum, similique
-											minima.
+											This project is intended to allow
+											users with low internet bandwidth to
+											stream live video to another user
+											while reducing the amount of
+											bandwidth used. Our solution to this
+											problem was, reduce the resolution
+											of outgoing live video on the
+											sending side of the application and
+											on the recieving side of the
+											application utilize a SRGAN to then
+											upscale this video feed to full
+											resolution.
 										</p>
 										<h2>How does it work?</h2>
 										<p>
-											Lorem, ipsum dolor sit amet
-											consectetur adipisicing elit. Harum
-											reprehenderit magnam reiciendis a
-											nemo deserunt fugit iste asperiores
-											ea, culpa excepturi nulla vero fuga.
-											Velit voluptate nesciunt sunt hic
-											temporibus!
+											SRGAN stands for Super Resolution
+											Generative Adversarial Network. The
+											idea behind SRGANs is to take a low
+											resolution image and upscale the
+											image into a high resolution image.
+											The end goal is achieving super
+											resolution images from the lowest
+											quality images.
+										</p>
+										<p>
+											SRGANs are meant to be used with
+											single images to upscale a low
+											resolution image to high resolution.
+											Utilizing OpenCV python image
+											processing and GPU computations, we
+											were able to split a video file
+											frame by frame (60 fps) and
+											individualy process the frames using
+											the SRGAN. Applying this concept to
+											captured live video, we were able to
+											successfully scale our low
+											resolution live video feed to high
+											resolution.
 										</p>
 									</Tab.Pane>
 									<Tab.Pane eventKey="second">
@@ -73,81 +93,62 @@ export default function Hackathon() {
 											>
 												<div className="ms-2 me-auto">
 													<div className="fw-bold">
-														Python and PostgreSQL
+														Python
 													</div>
-													The web scraping scripts
-													built with python
-													programming language
-													utilizing{" "}
+													SRGAN application built
+													using python programming
+													language utilizing{" "}
 													<a
 														target="_blank"
 														rel="noreferrer"
-														href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"
+														href="https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html"
 													>
-														Beautiful Soup
+														OpenCV
 													</a>{" "}
-													for HTML parsing and movie
-													compilation. Parsed html is
-													then put into a PostgreSQL
-													database containing movie
-													information which is then
-													displayed to user.
+													for video frame filtering
+													and upscaling and{" "}
+													<a
+														target="_blank"
+														rel="noreferrer"
+														href="https://github.com/tensorlayer/srgan"
+													>
+														SRGAN
+													</a>{" "}
+													training library.
 												</div>
 											</ListGroup.Item>
+
 											<ListGroup.Item
 												as="li"
 												className="d-flex justify-content-between align-items-start"
 											>
 												<div className="ms-2 me-auto">
 													<div className="fw-bold">
-														Selenium
+														Django/HTML/CSS
 													</div>
-													<a
-														target="_blank"
-														rel="noreferrer"
-														href="https://www.selenium.dev/documentation/webdriver/"
-													>
-														Selenium Web Driver
-													</a>{" "}
-													was used to pull active HTML
-													from desired web pages and
-													then passes this parsed HTML
-													to my python scripts
-													producing the database of
-													movies.
-												</div>
-											</ListGroup.Item>
-											<ListGroup.Item
-												as="li"
-												className="d-flex justify-content-between align-items-start"
-											>
-												<div className="ms-2 me-auto">
-													<div className="fw-bold">
-														React/HTML/CSS
-													</div>
-													The front end of the Movie
-													Finder application pulls
-													information from the
-													database of movies and
-													displays the information in
-													an interactable format for
-													users to view. Front end for
-													the Movie Finder application
-													is built using React, HTML,
-													and CSS.
+													The front end of the SRGAN
+													application displaying the
+													video stream before being
+													upscaled and after.
 												</div>
 											</ListGroup.Item>
 										</ListGroup>
 									</Tab.Pane>
 									<Tab.Pane eventKey="third">
 										<Col>
-											<video controls="true">
+											<video
+												controls="true"
+												style={{ width: "75%" }}
+											>
 												<source
 													src={crop}
 													type="video/mp4"
 												/>
 											</video>
-											<video controls="true">
+											<video
+												controls="true"
+												style={{ width: "75%" }}
+											>
 												<source
 													src={upscale}
 													type="video/mp4"

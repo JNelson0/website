@@ -1,12 +1,5 @@
 import "./skills.scss";
-import {
-	Container,
-	Row,
-	Col,
-	ProgressBar,
-	Card,
-	Button,
-} from "react-bootstrap";
+import { Container, Col, ProgressBar, Card, Button } from "react-bootstrap";
 
 export default function Skills() {
 	return (
@@ -30,7 +23,7 @@ export default function Skills() {
 							quibusdam architecto a repellendus!
 						</p>
 					</div>
-					<Card>
+					<Card style={{ width: "80%", overflow: "visible" }}>
 						<Card.Header as="h5">Key Achievement</Card.Header>
 						<Card.Body>
 							<Card.Title>Hackathon 1st place</Card.Title>
@@ -49,28 +42,37 @@ export default function Skills() {
 
 				<Col md className="col">
 					<div className="rowRight">
+						<h1>My level of expertise</h1>
 						<h2>Web Developement</h2>
 						<h4>React.js</h4>
 						<ProgressBar
 							variant="blue"
 							animated
-							now={85}
+							now={80}
+							className="mb-3"
+						/>
+						<h4>REST and NoSQL</h4>
+						<ProgressBar
+							variant="blue"
+							animated
+							now={80}
 							className="mb-3"
 						/>
 						<h4>Angular</h4>
 						<ProgressBar variant="blue" animated now={50} />
 					</div>
+
 					<div className="rowRight">
 						<h2>Software Development</h2>
 						<h4 className="python">Python</h4>
 						<ProgressBar
 							variant="blue"
 							animated
-							now={95}
+							now={90}
 							className="mb-3"
 						/>
 						<h4 className="c">C++</h4>
-						<ProgressBar variant="blue" animated now={70} />
+						<ProgressBar variant="blue" animated now={75} />
 					</div>
 				</Col>
 			</Container>

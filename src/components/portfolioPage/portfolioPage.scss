@@ -18,6 +18,7 @@
 			scroll-snap-align: start;
 			@include mobile {
 				scroll-snap-align: unset;
+				overflow-y: scroll;
 			}
 		}
 		.item {

@@ -9,6 +9,9 @@
 	@include mobile {
 		display: inline;
 		text-align: center;
+		h1 {
+			margin-top: 40px;
+		}
 	}
 
 	.cont {
@@ -24,7 +27,6 @@
 				align-items: center;
 			}
 			.card {
-				overflow: visible;
 				width: 18rem;
 				@include mobile {
 					width: 25rem;
