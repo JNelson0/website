@@ -5,7 +5,7 @@ import { Button, Col, Container } from "react-bootstrap";
 
 export default function About() {
 	return (
-		<Container className="outer" id="about" fluid>
+		<Container className="outer" id="about" style={{ width: "90%" }} fluid>
 			<Col className="c1" md>
 				Need something to fill the void
 			</Col>

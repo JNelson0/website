@@ -22,8 +22,12 @@
 			}
 		}
 		.item {
-			display: flex;
-			overflow: hidden;
+			@include mobile {
+				overflow: scroll;
+				&::-webkit-scrollbar {
+					display: none;
+				}
+			}
 		}
 	}
 }

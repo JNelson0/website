@@ -2,7 +2,6 @@
 .outer {
 	display: flex;
 	flex-direction: row;
-
 	@include mobile {
 		display: inline;
 	}

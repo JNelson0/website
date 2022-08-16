@@ -1,6 +1,6 @@
 import React from "react";
 import "./hackathon.scss";
-import { Container, Tab, Nav, Row, Col, ListGroup } from "react-bootstrap";
+import { Container, Tab, Nav, Col, ListGroup } from "react-bootstrap";
 import crop from "../../assets/crop.mp4";
 import upscale from "../../assets/upscale.mp4";
 
@@ -8,159 +8,153 @@ export default function Hackathon() {
 	return (
 		<div className="hackathon" id="Hackathon">
 			<Container fluid className="container">
-				<Col style={{ overflow: "visible" }} md>
-					<h1 className="title ">
-						SRGAN Video Upscaling and Streaming
-					</h1>
-					<Tab.Container
-						id="left-tabs-example"
-						defaultActiveKey="first"
-					>
-						<Row>
-							<Col sm={3}>
-								<Nav
-									variant="pills"
-									className="flex-column nav"
-									v
-								>
-									<Nav.Item>
-										<Nav.Link eventKey="first">
-											Description
-										</Nav.Link>
-									</Nav.Item>
-									<Nav.Item>
-										<Nav.Link eventKey="second">
-											Technologies
-										</Nav.Link>
-									</Nav.Item>
-									<Nav.Item>
-										<Nav.Link eventKey="third">
-											Demo Video
-										</Nav.Link>
-									</Nav.Item>
-								</Nav>
-							</Col>
-							<Col sm={9}>
-								<Tab.Content>
-									<Tab.Pane eventKey="first">
-										<h2>Summary</h2>
-										<p>
-											This project is intended to allow
-											users with low internet bandwidth to
-											stream live video to another user
-											while reducing the amount of
-											bandwidth used. Our solution to this
-											problem was, reduce the resolution
-											of outgoing live video on the
-											sending side of the application and
-											on the recieving side of the
-											application utilize a SRGAN to then
-											upscale this video feed to full
-											resolution.
-										</p>
-										<h2>How does it work?</h2>
-										<p>
-											SRGAN stands for Super Resolution
-											Generative Adversarial Network. The
-											idea behind SRGANs is to take a low
-											resolution image and upscale the
-											image into a high resolution image.
-											The end goal is achieving super
-											resolution images from the lowest
-											quality images.
-										</p>
-										<p>
-											SRGANs are meant to be used with
-											single images to upscale a low
-											resolution image to high resolution.
-											Utilizing OpenCV python image
-											processing and GPU computations, we
-											were able to split a video file
-											frame by frame (60 fps) and
-											individualy process the frames using
-											the SRGAN. Applying this concept to
-											captured live video, we were able to
-											successfully scale our low
-											resolution live video feed to high
-											resolution.
-										</p>
-									</Tab.Pane>
-									<Tab.Pane eventKey="second">
-										<ListGroup as="ol" numbered>
-											<ListGroup.Item
-												as="li"
-												className="d-flex justify-content-between align-items-start"
-											>
-												<div className="ms-2 me-auto">
-													<div className="fw-bold">
-														Python
-													</div>
-													SRGAN application built
-													using python programming
-													language utilizing{" "}
-													<a
-														target="_blank"
-														rel="noreferrer"
-														href="https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html"
-													>
-														OpenCV
-													</a>{" "}
-													for video frame filtering
-													and upscaling and{" "}
-													<a
-														target="_blank"
-														rel="noreferrer"
-														href="https://github.com/tensorlayer/srgan"
-													>
-														SRGAN
-													</a>{" "}
-													training library.
+				<h1 className="title ">SRGAN Video Upscaling and Streaming</h1>
+				<Tab.Container id="left-tabs-example" defaultActiveKey="first">
+					<div className="row">
+						<Col sm={3}>
+							<Nav variant="pills" className="flex-column nav" v>
+								<Nav.Item>
+									<Nav.Link eventKey="first">
+										Description
+									</Nav.Link>
+								</Nav.Item>
+								<Nav.Item>
+									<Nav.Link eventKey="second">
+										Technologies
+									</Nav.Link>
+								</Nav.Item>
+								<Nav.Item>
+									<Nav.Link eventKey="third">
+										Demo Video
+									</Nav.Link>
+								</Nav.Item>
+							</Nav>
+						</Col>
+						<Col sm={9}>
+							<Tab.Content
+								style={{
+									display: "flex",
+									height: "100%",
+									width: "100%",
+								}}
+							>
+								<Tab.Pane eventKey="first">
+									<h2>Summary</h2>
+									<p>
+										This project is intended to allow users
+										with low internet bandwidth to stream
+										live video to another user while
+										reducing the amount of bandwidth used.
+										Our solution to this problem was, reduce
+										the resolution of outgoing live video on
+										the sending side of the application and
+										on the recieving side of the application
+										utilize a SRGAN to then upscale this
+										video feed to full resolution.
+									</p>
+									<h2>How does it work?</h2>
+									<p>
+										SRGAN stands for Super Resolution
+										Generative Adversarial Network. The idea
+										behind SRGANs is to take a low
+										resolution image and upscale the image
+										into a high resolution image. The end
+										goal is achieving super resolution
+										images from the lowest quality images.
+									</p>
+									<p>
+										SRGANs are meant to be used with single
+										images to upscale a low resolution image
+										to high resolution. Utilizing OpenCV
+										python image processing and GPU
+										computations, we were able to split a
+										video file frame by frame (60 fps) and
+										individualy process the frames using the
+										SRGAN. Applying this concept to captured
+										live video, we were able to successfully
+										scale our low resolution live video feed
+										to high resolution.
+									</p>
+								</Tab.Pane>
+								<Tab.Pane eventKey="second">
+									<ListGroup as="ol" numbered>
+										<ListGroup.Item
+											as="li"
+											className="d-flex justify-content-between align-items-start"
+										>
+											<div className="ms-2 me-auto">
+												<div className="fw-bold">
+													Python
 												</div>
-											</ListGroup.Item>
+												SRGAN application built using
+												python programming language
+												utilizing{" "}
+												<a
+													target="_blank"
+													rel="noreferrer"
+													href="https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html"
+												>
+													OpenCV
+												</a>{" "}
+												for video frame filtering and
+												upscaling and{" "}
+												<a
+													target="_blank"
+													rel="noreferrer"
+													href="https://github.com/tensorlayer/srgan"
+												>
+													SRGAN
+												</a>{" "}
+												training library.
+											</div>
+										</ListGroup.Item>
 
-											<ListGroup.Item
-												as="li"
-												className="d-flex justify-content-between align-items-start"
-											>
-												<div className="ms-2 me-auto">
-													<div className="fw-bold">
-														Django/HTML/CSS
-													</div>
-													The front end of the SRGAN
-													application displaying the
-													video stream before being
-													upscaled and after.
+										<ListGroup.Item
+											as="li"
+											className="d-flex justify-content-between align-items-start"
+										>
+											<div className="ms-2 me-auto">
+												<div className="fw-bold">
+													Django/HTML/CSS
 												</div>
-											</ListGroup.Item>
-										</ListGroup>
-									</Tab.Pane>
-									<Tab.Pane eventKey="third">
-										<Col>
-											<video
-												controls="true"
-												style={{ width: "75%" }}
-											>
-												<source
-													src={crop}
-													type="video/mp4"
-												/>
-											</video>
-											<video
-												controls="true"
-												style={{ width: "75%" }}
-											>
-												<source
-													src={upscale}
-													type="video/mp4"
-												/>
-											</video>
-										</Col>
-									</Tab.Pane>
-								</Tab.Content>
-							</Col>
-						</Row>
-					</Tab.Container>
-				</Col>
+												The front end of the SRGAN
+												application displaying the video
+												stream before being upscaled and
+												after.
+											</div>
+										</ListGroup.Item>
+									</ListGroup>
+								</Tab.Pane>
+								<Tab.Pane eventKey="third">
+									<Col>
+										<video
+											controls="true"
+											style={{
+												width: "75%",
+											}}
+										>
+											<source
+												src={crop}
+												type="video/mp4"
+											/>
+										</video>
+										<video
+											controls="true"
+											style={{
+												width: "75%",
+											}}
+										>
+											<source
+												src={upscale}
+												type="video/mp4"
+											/>
+										</video>
+									</Col>
+								</Tab.Pane>
+							</Tab.Content>
+						</Col>
+					</div>
+				</Tab.Container>
 			</Container>
 
 			{/* <div className="center">
