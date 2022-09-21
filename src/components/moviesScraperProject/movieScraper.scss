@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .movieScraper {
-	height: 100vh;
+	height: 90vh;
 	width: 100vw;
 	@include mobile {
 		height: unset;
@@ -11,6 +11,7 @@
 		margin-top: 25px;
 	}
 	.container {
+
 		display: flex;
 		flex-direction: column;
 		width: 90%;
